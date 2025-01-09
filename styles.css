@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.back
+ {
+    background-color: #0e0e0e;
+}
+
+
+nav.r-nav {
+    background-color: transparent;
+    padding: 20px 0;
+    transition: 0.5s all;
+}
+
+nav .navbar-brand {
+    font-size: 30px;
+    color: #0e0e0e;
+    font-weight: bold;
+}
+
+nav .navbar-nav li a {
+    color: rgba(253, 250, 250, 0.8) !important;
+    font-size: 20px;
+    font-weight: 600;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+nav.r-nav.stickyadd {
+    background: #fff !important;
+    padding: 15px 0;
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.05);
+    transition: 0.5s all;
+}
+
+nav.r-nav.stickyadd .navbar-brand,
+nav.r-nav.stickyadd .nav-link {
+    color: #000 !important;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    height: 100vh; 
+    padding: 300px 10% 0px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 200px;
+}
+
+
+.home-content {
+    max-width: 600px;
+    text-align: center; 
+    z-index: 1;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    color: #fff;
+    text-shadow: 2px 4px 9px rgb(210, 35, 35); 
+
+}
+
+.home-content h3 {
+    font-size: 52px;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 2px 4px 9px rgb(210, 35, 35); 
+}
+
+.home-sci a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.home-sci a:hover {
+    color: #007bff;
+}
+
+.text {
+    color: #007bff; 
+}
+.image {
+    width: 400px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 200px;
+}
+
+.image:hover {
+    width: 420px;
+    transition:  0.5s ease-in-out;
+
+} 
+/*effet l image**/
+.cards{
+    margin: 0 auto;
+    padding: 2em;
+    width: 450px;
+    background: #1b1b1c;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .cards::after, .cards::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  .cards::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+/* fot text scrolin*/
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Ajustez selon vos besoins */
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* Scroll content */
+.scroll-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite; 
+}
+
+.scroll-content span {
+    margin-right: 20px; 
+}
+
+/* Animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}  
+
+/*  tools scrolins*/
+.toolbox-container {
+    margin: 20px;
+  }
+  .toolbox-title {
+    font-size: 1.5rem;
+    color: #a29bfe;
+    margin-bottom: 10px;
+  }
+  .scrollable {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: thin; /* For modern browsers */
+    scrollbar-color: #6c5ce7 transparent; /* Custom colors */
+  }
+  .scrollable::-webkit-scrollbar {
+    height: 8px;
+  }
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: #6c5ce7;
+    border-radius: 10px;
+  }
+  .scrollable::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .tool {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  .tool img {
+    max-height: 50px;
+  }
+  .tool:hover {
+    transform: scale(1.1);
+  }
+
+  /* Project section styling */
+.project-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #530361, #380232);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-content {
+    max-width: 50%;
+  }
+  
+  .project-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .project-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: aliceblue;
+  }
+  
+  .tech-stack {
+    margin-bottom: 20px;
+  }
+  
+  .tech-stack span {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .tech-stack ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tech-stack li {
+    background: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: aliceblue;
+  }
+  
+  .visit-site {
+    text-decoration: none;
+    background: #fff;
+    color: #6a11cb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .project-image img {
+    max-width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .project-sectio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #295bee, #141517);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+  /*  contact*/
+  .container {
+text-align: center; 
+   max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  label {
+    color: #ddd;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  
+  label,
+  input,
+  textarea {
+    display: block;
+  }
+  
+  input,
+  textarea {
+    padding: 1em 6em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .submit-btn {
+    background: #66d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+  }
