@@ -8,10 +8,14 @@
     background-color: #0e0e0e;
 }
 
+.nav-item {
+  padding-right: 50px;
+}
 
 nav.r-nav {
     background-color: transparent;
-    padding: 20px 0;
+    padding: 20px 0px;
+    padding-right: 100px;
     transition: 0.5s all;
 }
 
@@ -337,4 +341,40 @@ text-align: center;
     border: none;
     border-radius: 3px;
     padding: 0.5em 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 5%;
+      height: auto;
+      gap: 30px;
+    }
+  
+    .home-content {
+      max-width: 350px;
+      text-align: center;
+    }
+  
+    .home-content h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+  
+    .home-content h3 {
+      font-size: 22px;
+    }
+  
+    .image {
+      width: 250px;
+      height: auto;
+    }
+  
+    .cards {
+      width: 90%;
+      margin: 20px auto;
+      padding: 15px;
+    }
   }
