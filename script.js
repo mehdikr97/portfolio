@@ -23,7 +23,7 @@ $(document).ready(function () {
         duration:2500,
         delay:200
     })
-    ScrollReveal().reveal('.hello,i ,.mehdi,.pra, .im',{delay:400,origin:'left'});
+    ScrollReveal().reveal('.hello,.mehdi,.pra, .im',{delay:400,origin:'left'});
 
 // scrol tools
 const $scrollable = $('.scrollable');
